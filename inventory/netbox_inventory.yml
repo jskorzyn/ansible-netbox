@@ -1,0 +1,8 @@
+---
+plugin: netbox.netbox.nb_inventory
+validate_certs: False
+config_context: False
+group_by:
+  - platforms
+  - cluster
+  - tags

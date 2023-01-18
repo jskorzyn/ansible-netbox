@@ -1,0 +1,10 @@
+---
+plugin: netbox.netbox.nb_inventory
+validate_certs: False
+config_context: False
+query_filters:
+  - tag: ansible
+group_by:
+  - platforms
+  - cluster
+  - tags
