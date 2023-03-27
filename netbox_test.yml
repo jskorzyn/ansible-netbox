@@ -9,8 +9,7 @@
   vars:
     netbox_state: present
     vmware_inv_grp: all
-
-
+  
   tasks:
 
   - name: Create OS platform
