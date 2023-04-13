@@ -36,7 +36,7 @@
 #        platform: "{{ hostvars[item]['summary.config.guestFullName'] }}"
 #        comments: "Test Ansible 26.08.2022"
       state: "{{ netbox_state }}"
-      validate_certs: no
+      validate_certs: false
     loop: "{{groups[vmware_inv_grp]}}"
 
 
