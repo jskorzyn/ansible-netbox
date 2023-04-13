@@ -29,6 +29,7 @@
       data:
         address: "{{ hostvars[item]['ansible_host'] | default(omit)}}"
       state: present
+      validate_certs: false
     loop: "{{ groups[vmware_inv_grp] }}"
 
   - name: Update vcpus, memory and disk of an existing virtual machine
