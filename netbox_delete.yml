@@ -29,6 +29,16 @@
       validate_certs: no
     loop: "{{groups[vmware_inv_grp]}}"
 
+  - name: Create tags
+    netbox.netbox.netbox_tag:
+      netbox_url: "{{netbox_url | default(omit)}}"
+      netbox_token: "{{netbox_token | default(omit)}}"
+      data:
+        name: "{{ item }}"
+      state: "{{ netbox_state }}"
+    loop:
+      - ansible_managed
+
   - name: Remove OS platform
     netbox.netbox.netbox_platform:
       netbox_url: "{{netbox_url}}"
