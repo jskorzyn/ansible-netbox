@@ -28,7 +28,7 @@
       netbox_token: "{{netbox_token | default(omit)}}"
       data:
         name: "{{ item }}"
-        state: "{{ netbox_state }}"
+      state: "{{ netbox_state }}"
     loop:
       - ansible_managed
 
