@@ -29,6 +29,7 @@
       data:
         name: "{{ item }}"
       state: "{{ netbox_state }}"
+      validate_certs: no
     loop:
       - ansible_managed
 
