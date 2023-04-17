@@ -28,6 +28,7 @@
       netbox_token: "{{netbox_token | default(omit)}}"
       data:
         name: "{{ item }}"
+        color: "Red"
       state: "{{ netbox_state }}"
       validate_certs: no
     loop:
