@@ -28,7 +28,7 @@
       validate_certs: no
     loop: "{{groups[vmware_inv_grp]}}"
 
-  - name: Create tags
+  - name: Remove tags
     netbox.netbox.netbox_tag:
       netbox_url: "{{netbox_url | default(omit)}}"
       netbox_token: "{{netbox_token | default(omit)}}"
